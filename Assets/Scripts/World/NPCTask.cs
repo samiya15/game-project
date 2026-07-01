@@ -2,26 +2,40 @@ using UnityEngine;
 
 public class NPCTask : MonoBehaviour
 {
-    [Header("Task Information")]
+    [Header("Task Details")]
     public string taskName;
-
     [TextArea]
     public string description;
 
-    public float timeCost = 2f;
-    public float timeReward = 4f;
+    [Header("Time")]
+    public float timeCost;
+    public float timeReward;
 
-    public bool completed = false;
+    [Header("Status")]
+    public bool isCompleted;
+
+    public void StartTask()
+    {
+        if (isCompleted)
+        {
+            Debug.Log("Task already completed.");
+            return;
+        }
+
+        Debug.Log("Started task: " + taskName);
+
+        // Later Person 1 will add:
+        // TimeManager.Instance.SpendTime(timeCost);
+    }
 
     public void CompleteTask()
     {
-        if (completed)
+        if (isCompleted)
             return;
 
-        completed = true;
+        isCompleted = true;
 
-        Debug.Log(taskName + " completed!");
+        Debug.Log("Completed: " + taskName);
 
-        
     }
 }
