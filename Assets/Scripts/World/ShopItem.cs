@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ShopItem : MonoBehaviour
+public class ShopItem : MonoBehaviour, IInteractable
 {
     public string itemName;
     public float timeCost = 2f;
@@ -11,4 +11,9 @@ public class ShopItem : MonoBehaviour
 
 
     }
+
+    public void Interact()
+{
+    BuyItem();
+}
 }

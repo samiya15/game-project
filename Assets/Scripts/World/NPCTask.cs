@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class NPCTask : MonoBehaviour
+public class NPCTask : MonoBehaviour, IInteractable
 {
     [Header("Task Details")]
     public string taskName;
@@ -38,4 +38,10 @@ public class NPCTask : MonoBehaviour
         Debug.Log("Completed: " + taskName);
 
     }
+    public void Interact()
+{
+    Debug.Log("Interacting with " + taskName);
+
+    StartTask();
+}
 }

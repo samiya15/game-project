@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 247688861}
   - component: {fileID: 247688860}
   - component: {fileID: 247688863}
+  - component: {fileID: 247688864}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -470,6 +471,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
   itemName: Energy Drink
   timeCost: 2
+--- !u!65 &247688864
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247688858}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &338879308
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +505,7 @@ GameObject:
   - component: {fileID: 338879311}
   - component: {fileID: 338879310}
   - component: {fileID: 338879313}
+  - component: {fileID: 338879314}
   m_Layer: 0
   m_Name: NPC_Clockmaker
   m_TagString: Untagged
@@ -601,7 +624,28 @@ MonoBehaviour:
   description: Find missing clock gears.
   timeCost: 3
   timeReward: 6
-  completed: 0
+  isCompleted: 0
+--- !u!65 &338879314
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338879308}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &720271750
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,6 +1172,7 @@ GameObject:
   - component: {fileID: 1642654195}
   - component: {fileID: 1642654194}
   - component: {fileID: 1642654197}
+  - component: {fileID: 1642654198}
   m_Layer: 0
   m_Name: NPC_Worker
   m_TagString: Untagged
@@ -1246,7 +1291,28 @@ MonoBehaviour:
   description: Help repair the town bridge.
   timeCost: 2
   timeReward: 5
-  completed: 0
+  isCompleted: 0
+--- !u!65 &1642654198
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642654192}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1688881547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1326,7 @@ GameObject:
   - component: {fileID: 1688881550}
   - component: {fileID: 1688881549}
   - component: {fileID: 1688881552}
+  - component: {fileID: 1688881553}
   m_Layer: 0
   m_Name: NPC_Shopkeeper
   m_TagString: Untagged
@@ -1378,7 +1445,28 @@ MonoBehaviour:
   description: Take supplies across town.
   timeCost: 1
   timeReward: 3
-  completed: 0
+  isCompleted: 0
+--- !u!65 &1688881553
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688881547}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
