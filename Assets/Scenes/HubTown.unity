@@ -333,8 +333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b9a10d2a65a24d9b5e4dce9628c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
-  itemName: Energy Drink
-  timeCost: 2
 --- !u!65 &107166298
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -619,8 +617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b9a10d2a65a24d9b5e4dce9628c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
-  itemName: Energy Drink
-  timeCost: 2
 --- !u!65 &220754668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -937,8 +933,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b9a10d2a65a24d9b5e4dce9628c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
-  itemName: Energy Drink
-  timeCost: 2
 --- !u!65 &247688864
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1200,11 +1194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a711b12b84f319d41bafb3501ebc7fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTask
-  taskName: Repair the Clock Tower
-  description: Find missing clock gears.
-  timeCost: 3
-  timeReward: 6
-  isCompleted: 0
 --- !u!65 &338879314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1226,6 +1215,53 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &447280166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 447280167}
+  - component: {fileID: 447280168}
+  m_Layer: 0
+  m_Name: TimeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &447280167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447280166}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447280168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447280166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a578cc35b6f14a4da9146f9879004bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManager
+  startingHours: 72
+  drainTimeWhileMoving: 1
+  movingDrainPerSecond: 0.01
 --- !u!1 &470049555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3258,11 +3294,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a711b12b84f319d41bafb3501ebc7fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTask
-  taskName: Work at Construction Site
-  description: Help repair the town bridge.
-  timeCost: 2
-  timeReward: 5
-  isCompleted: 0
 --- !u!65 &1642654198
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3412,11 +3443,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a711b12b84f319d41bafb3501ebc7fa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCTask
-  taskName: Deliver Supplies
-  description: Take supplies across town.
-  timeCost: 1
-  timeReward: 3
-  isCompleted: 0
 --- !u!65 &1688881553
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3507,8 +3533,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 991b9a10d2a65a24d9b5e4dce9628c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopItem
-  itemName: Energy Drink
-  timeCost: 2
 --- !u!65 &1739759658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3996,3 +4020,4 @@ SceneRoots:
   - {fileID: 1742978255}
   - {fileID: 1398108320}
   - {fileID: 1319358662}
+  - {fileID: 447280167}
