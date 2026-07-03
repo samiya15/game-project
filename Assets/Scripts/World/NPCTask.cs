@@ -39,9 +39,19 @@ public class NPCTask : MonoBehaviour, IInteractable
 
     }
     public void Interact()
-{
-    Debug.Log("Interacting with " + taskName);
+    {
+        Debug.Log("Interacting with " + taskName);
 
-    StartTask();
-}
+        StartTask();
+    }
+
+    public string GetPromptText()
+    {
+        if (isCompleted)
+        {
+            return $"{taskName}: Task already completed.";
+        }
+
+        return $"{taskName}\n{description}\nCost: {timeCost}h | Reward: {timeReward}h\nPress E to accept.";
+    }
 }

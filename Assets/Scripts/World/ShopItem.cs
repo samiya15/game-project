@@ -13,7 +13,12 @@ public class ShopItem : MonoBehaviour, IInteractable
     }
 
     public void Interact()
-{
-    BuyItem();
-}
+    {
+        BuyItem();
+    }
+
+    public string GetPromptText()
+    {
+        return $"{itemName}\nCost: {timeCost}h\nPress E to buy.";
+    }
 }
