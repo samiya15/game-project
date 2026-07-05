@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [Header("Movement")]
     public float walkSpeed = 4f;
     public float runSpeed = 7f;
     public float rotationSpeed = 10f;
@@ -16,6 +15,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         rb.freezeRotation = true;
+        rb.interpolation = RigidbodyInterpolation.Interpolate;
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
         movement = new Vector3(h, 0f, v).normalized;
 
-        bool moving = movement.magnitude > 0.1f;
+        bool moving = movement.sqrMagnitude > 0f;
 
         if (TimeManager.Instance != null)
         {
@@ -57,15 +57,15 @@ public class PlayerController : MonoBehaviour
 
         if (movement != Vector3.zero)
         {
-            Quaternion rotation =
-                Quaternion.LookRotation(movement);
+            Quaternion targetRotation = Quaternion.LookRotation(movement);
 
-            transform.rotation =
+            rb.MoveRotation(
                 Quaternion.Slerp(
-                    transform.rotation,
-                    rotation,
+                    rb.rotation,
+                    targetRotation,
                     rotationSpeed * Time.fixedDeltaTime
-                );
+                )
+            );
         }
     }
 }
